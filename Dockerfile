@@ -30,7 +30,7 @@ RUN chmod o-rwx /root/.ssh
 #-------------Application Specific Stuff ----------------------------------------------------
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get -y install nginx uwsgi uwsgi-plugin-python git python-virtualenv vim python-dev
+RUN apt-get -y install nginx uwsgi uwsgi-plugin-python python-virtualenv vim
 #RUN apt-get -y install nginx uwsgi uwsgi-plugin-python git python-virtualenv vim python-dev
 RUN mkdir /home/web
 ADD server-conf /home/web/server-conf
