@@ -15,7 +15,8 @@ ADD 71-apt-cacher-ng /etc/apt/apt.conf.d/71-apt-cacher-ng
 RUN echo "deb http://httpredir.debian.org/debian jessie main" > /etc/apt/sources.list
 #RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
 RUN apt-get -y update
-RUN apt-get -y install ca-certificates openssh-server supervisor rpl pwgen
+RUN apt-get -y install ca-certificates openssh-server supervisor rpl pwgen 
+RUN apt-get install -y python-pip libjpeg-dev zlib1g-dev
 RUN mkdir /var/run/sshd
 ADD sshd.conf /etc/supervisor/conf.d/sshd.conf
 
